@@ -1,5 +1,4 @@
 if ("serviceWorker" in navigator) {
-  console.log("in navigator");
   navigator.serviceWorker
     .register("./sw.js")
     .then((registration) => {
