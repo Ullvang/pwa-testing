@@ -5,11 +5,10 @@ self.addEventListener("install", (e) => {
 
   let installPromise = new Promise((resolve) => {
     setTimeout(resolve, 3000);
+    console.log("SW: Install Event Done");
   });
 
   e.waitUntil(installPromise);
-
-  console.log("SW: Install Event Done");
 });
 
 self.addEventListener("activate", (e) => {
@@ -17,6 +16,7 @@ self.addEventListener("activate", (e) => {
 
   let activatePromise = new Promise((resolve) => {
     setTimeout(resolve, 3000);
+    console.log("SW: Activate Event Done");
   });
 
   e.waitUntil(activatePromise);
